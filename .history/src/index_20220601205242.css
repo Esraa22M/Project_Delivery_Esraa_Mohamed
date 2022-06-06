@@ -1,0 +1,248 @@
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  /* colors */
+  --clr-primary: hsla(136, 53%, 59%, 1);
+  --clr-black:hsla(216, 8%, 12%, 1);
+  --clr-light: hsla(210, 5%, 67%, 0.19);
+
+  --clr-light-grey:hsla(231, 6%, 58%, 1);
+  --clr-white:hsla(0, 0%, 100%, 1);
+  --clr-neutral:hsla(247, 13%, 25%, 0.22);
+    /* font-families */
+    --ff-raleway:'Raleway', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-source:'Source Sans Pro', sans-serif;
+}
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html ,#root ,body{
+  font-family: var(--ff-raleway);
+  font-size:16px;
+  color: var(--clr-black);
+  display: grid;
+  font-style: normal;
+  background-color: var(--clr-white);
+  line-height:18px;
+  height: 100%;
+  font-weight: 400;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h2 ,h3 , h1, span ,p,div,a,button{
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: var(--clr-black);
+  font-weight: 400;
+  font-style: normal;
+  }
+  button{
+    outline:none;
+    border:none;
+  }
+
+#root{
+  position: relative;
+}
+ul{
+  list-style: none;
+}
+li{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  margin:0 7.32vw;
+
+}
+
+/**utility classes**/
+
+.flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.items-center{
+  align-items: center;
+}
+.items-start{
+  align-items: flex-start
+}
+.flex-center{
+  justify-content: center;
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+.text-light{
+  color: var(--clr-white);
+}
+.text-dark{
+ color: var(--clr-black);
+}
+.bg-dark{
+  background-color: var(--clr-black);
+}
+.bg-light{
+  background-color: var(--clr-white);
+}
+.font-500{
+  font-weight: 500;
+}
+.font-600{
+  font-weight: 600;
+}
+.font-700{
+  font-weight: 700;
+}
+.flex-column-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+
+/** custom dropdown menu**/
+.custom-options{
+  display: none;
+}
+.select-wrapper span{   
+  font-weight: 500;
+  font-size: var(--fs-18);
+  line-height: 1.8rem;
+  }
+.select__trigger .arrow>span:last-child{
+  margin-left:10px ;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.custom-options{
+  position: absolute;
+  top:4.063rem;
+  right: 4.875rem;
+  background-color: #FFFFFF;
+  padding: 1.46vw 0;
+  z-index:35;
+
+  
+  box-shadow: 0 0 10px rgb(61, 52, 52);
+}
+.custom-options >.custom-option{
+  padding-left: 1.46vw;
+  padding-right: 2.93vw;
+  padding-top: 8px;
+  font-weight: 500;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+.custom-options >.custom-option:not(:last-child){
+  margin-bottom:0.95vw ;
+
+}
+.custom-options .custom-option:hover , .custom-options .custom-option:focus 
+  {
+  background-color:hsla(0, 0%, 93%, 1)
+  ;
+ 
+}
+
+.custom-options .custom-option>span:last-child{
+  margin-left: 0.4rem;
+}
+.show{
+  display: block;
+}
+/**navbar links active state style*/
+.active {
+  font-weight:600!important;
+  color:var(--clr-primary)!important;
+  border-bottom: 2px solid var(--clr-primary)!important;
+}
+/**attributes buttons style in active state**/
+.activeButton{
+  background-color:var(--clr-black)!important;
+  color:var(--clr-white)!important;
+}
+.activeSwatchButton{
+  border:1px solid var(--clr-primary)!important;
+
+}
+
+
+.total{
+  margin: 1vw 0;
+  font-weight: 400;
+}
+/**attributes style**/
+.attributes-container .attribute-header , .product-price{
+  font-family:var( --ff-roboto);
+  font-size:1.125rem;
+  font-weight:700;
+
+}
+.attributes-container .attribute-header{
+margin-top:1rem;
+margin-bottom:0.5rem;
+}
+/**order info style*/
+.order-info{
+  margin-top: 2rem;
+}
+.order-info   .tax , .order-info .quantity{
+  min-width: fit-content;
+  width:11.5rem;
+
+}
+.order-info   .tax span, .order-info .quantity span{ 
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  line-height: 1.75rem;
+}
+.order-info .quantity{
+  margin-top: 0.5rem;
+}
+.order-info .tax-value , .order-info .quantity-value{
+  font-weight:700;
+}
+
+.total span{
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.total>span:last-child{
+  margin-left: 2.75rem;
+}
+
+.btn-order{
+  color:var(--clr-white);
+  background-color: var(--clr-primary);
+  width:17.438rem;
+  height:2.688rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.05rem;
+  margin-bottom: 17.125rem;
+}
